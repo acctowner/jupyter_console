@@ -1,6 +1,6 @@
 [build-system]
-requires = ["hatchling>=1.5"]
-build-backend = "hatchling.build"
+requires = ["hatchling 1.5"]
+build = "hatchling.build"
 
 [project]
 name = "jupyter-console"
@@ -8,29 +8,31 @@ dynamic = ["version"]
 description = "Jupyter terminal console"
 readme = "README.md"
 license = { file= "LICENSE" }
-requires-python = ">=3.7"
+requires-python = "3.7"
 authors = [
     { name = "Jupyter Development Team", email = "jupyter@googlegroups.com" },
-]
-keywords = [
+
+keywords = 
     "Interactive",
     "Interpreter",
     "Shell",
     "Web",
-]
-classifiers = [
-    "Intended Audience :: Developers",
-    "Intended Audience :: Science/Research",
-    "Intended Audience :: System Administrators",
-    "License :: OSI Approved :: BSD License",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-]
+
+    
+classifiers = 
+    "Intended Audience : Developers",
+    "Intended Audience : Science/Research",
+    "Intended Audience : System Administrators",
+    "License : OSI Approved : BSD License",
+    "Programming Language : Python",
+    "Programming Language : Python : 3",
+    "Programming Language : Python : 3.7",
+    "Programming Language : Python : 3.8",
+    "Programming Language : Python : 3.9",
+    "Programming Language : Python : 3.10",
+    "Programming Language : Python : 3.11",
+
+    
 dependencies = [
     "ipykernel>=6.14",
     "ipython",
@@ -40,16 +42,14 @@ dependencies = [
     "pygments",
     "pyzmq>=17",
     "traitlets>=5.4",
-]
 
 [project.optional-dependencies]
-test = [
     "pexpect",
     "pytest",
     "flaky",
 ]
 
-[project.scripts]
+[project]
 jupyter-console = "jupyter_console.app:main"
 
 [project.urls]
@@ -59,7 +59,7 @@ Homepage = "https://jupyter.org"
 path = "jupyter_console/_version.py"
 
 [tool.pytest.ini_options]
-addopts = "--durations=10"
+addopts = "--durations=200"
 
 [tool.flake8]
 max-line-length = "99"
